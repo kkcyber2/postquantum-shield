@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pqshield"
+version = "1.0.0"
+description = "Hybrid X25519 + LWE key agreement that survives either primitive falling"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Konain Sultan Khan", email = "kkdev9715@gmail.com" }]
+keywords = ["post-quantum", "lwe", "kem", "x25519", "hybrid-handshake"]
+dependencies = ["cryptography>=41"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/kkcyber2/postquantum-shield"
+Repository = "https://github.com/kkcyber2/postquantum-shield"
+
+[tool.setuptools.packages.find]
+include = ["pqshield*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
